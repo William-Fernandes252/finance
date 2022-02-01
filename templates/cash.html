@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action = "/cash" method = "post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" name="operation">
+                <option disabled selected>Operation</option>
+                <option value = "Add">Add</option>
+                <option value = "Withdraw">Withdraw</option>
+            <select>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" autocomplete = "off" id="value" name="value" placeholder="Value" type="number" min = "0" title = "Must be a non-zero value." value = "0" step = "0.01">
+        </div>
+        <button class="btn btn-primary" type="submit">Confirm</button>
+    </form>
+{% endblock %}

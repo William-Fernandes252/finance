@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update username
+{% endblock %}
+
+{% block main %}
+    <form action = "/username" id = "update" method = "post">
+        <div class="mb-3">
+            <input autocomplete = "off" autofocus class="form-control mx-auto w-auto" id = "username" name="new" placeholder = "New Username" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}

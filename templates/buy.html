@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <form action = "/buy" method = "post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" autocomplete = "off" id="shares" name="shares" placeholder="Shares" type="number" min = "1" title = "Must be greater that or equal to one.">
+        </div>
+        <div style = "padding-bottom: 15px">
+            <button class="btn btn-primary" type="submit">Buy</button>
+        </div>
+        <div>
+            <button class="btn btn-primary" name = "Cart" value = "1" type="submit">Add to Cart</button>
+        </div>
+    </form>
+{% endblock %}

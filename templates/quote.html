@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block tittle%}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action = "/quote" method = "post">
+        <div class = "mb-3">
+            <input autocomplete = "off" autofocus class = "form-control mx-auto w-auto" id = "quote" name = "symbol" placeholder = "Symbol" type = "text" pattern = "^[A-Za-z]+$" title = "Must contain only alphabetical charaters.">
+        </div>
+        <button class="btn btn-primary" id = "quote-button" name = "Quote" value = "1" type="submit">Quote</button>
+        <button class="btn btn-primary" name = "Favorite" value = "1" type="submit">Add to Favorites</button>
+    </form>
+{% endblock %}

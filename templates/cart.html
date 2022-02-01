@@ -1,0 +1,45 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Cart
+{% endblock %}
+
+{% block summaryTable %}
+    <main class = "container py-5 text-center">
+        <div>
+            <table class="table tablestriped">
+                <thead>
+                    <tr>
+                        <th class="text-start">Symbol</th>
+                        <th class="text-start">Name</th>
+                        <th class="text-end">Shares</th>
+                        <th class="text-end">Price</th>
+                        <th class="text-end">TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                        <tr>
+                            <td class="text-start">{{item.symbol}}</td>
+                            <td class="text-start">{{item.name}}</td>
+                            <td class="text-end">{{item.shares}}</td>
+                            <td class="text-end">{{item.price | usd}}</td>
+                            <td class="text-end">{{item.cash | usd}}</td>
+                        </tr>
+                    {% endfor %}
+                <tfoot>
+                    <tr>
+                        <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
+                        <td class="border-0 w-bold text-end">{{total | usd}}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div>
+            <form action = "/cart" method = "post">
+                <button class ="btn btn-primary" id = "cart-button" name = "Clear" value = "1" type = "submit">Clear Cart</button>
+                <button class = "btn btn-primary" name = "Buy" value = "1" type = "submit">Buy Cart</button>
+            </form>
+        </div>
+    </main>
+{% endblock %}
