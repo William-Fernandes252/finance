@@ -24,6 +24,13 @@ As custom features (besides the features required in the course), I implemented:
   - A **Favorites** functionality, where the users can follow the stocks prices and add them to cart as they want;
   - A **cash managment** system, where the users can add or withdraw money in their accounts;
   - A interface to **edit** usernames and passwords.
+Also, during this project I could learn about
+  - The fundamentals of web programming, including processing requests, consuming of APIs, data managment etc;
+  - The MVC design pattern;
+  - Structuring and styling of web pages with HTML, CSS and Bootstrap;
+  - Processing of users input throught forms;
+  - Relational database manipulation with CRUD operations;
+  - SQL fundamentals with SQLite.
 
 ## Project screenshots
 
