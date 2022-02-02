@@ -1,5 +1,5 @@
 # Finance
-CS50x's Finance (with some custom features)
+CS50x Finance (with some custom features)
 
 ![App main page](/screenshots/main.jpg)
 
